@@ -116,8 +116,31 @@ console.log(ticketPriceTotal);
 //could solve given the data set and the 5k fun run theme.  
 //Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// Problem 1
 
-// Problem 2
+
+// Problem 1 - using .map
+// There was a security breach on the website and you need to email all the runners to let 
+// them know to change their passwords on the website. Create a new array with just 
+// the runners' emails.
+
+allEmails = [];
+
+allEmails = runners.map((contact => contact.email));
+console.log(allEmails);
+
+
+// Problem 2 - using .filter 
+//You want to create an array that lists the runners who gave donations of 200 or more, so you can send them a gift
+
+let bigDonation = [];
+
+
+ runners.filter(function(donator) {
+   if(donator.donation >= 200) {
+   bigDonation.push(donator)
+} 
+});
+console.log(bigDonation);
+
 
 // Problem 3
