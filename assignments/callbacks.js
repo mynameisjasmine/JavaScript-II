@@ -68,11 +68,19 @@ multiplyNums(x,y,function(multiple) {
   console.log(multiple)
 });
 
-
-function contains(item, list, cb) {
-  // contains checks if an item is present inside of the given array/list.
+// contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-}
+  const stuff = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
+
+  function contains(item, list, 
+  cb) {
+    return cb (list.includes(item))
+  }
+  // Invocation
+  contains('Gum',stuff,function(answer) {
+  console.log(answer)
+  });
+  
 
 /* STRETCH PROBLEM */
 
