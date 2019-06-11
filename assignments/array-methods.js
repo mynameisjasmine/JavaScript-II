@@ -63,9 +63,7 @@ let fullName = [];
  runners.forEach(function(runner) {
       return fullName.push(runner.first_name, runner.last_name)
  });
-// for(let i = 0; i < runners.length; i++) {
-//  fullName.push(runners[i].first_name, runners[i].last_name);
-// }
+
 
 console.log(fullName);
 
@@ -76,12 +74,8 @@ console.log(fullName);
 // The event director needs to have all the runner's first names converted 
 //to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
 let allCaps = [];
-// for(i = 0; i < runners.length; i++){
-//     allCaps.push(runners[i].first_name)
-    
-// }
 
-allCaps = runners.map((name => runners.first_name.toUpperCase()));
+allCaps = runners.map((name => name.first_name.toUpperCase()));
 console.log(allCaps); 
 
 
