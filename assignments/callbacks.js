@@ -46,14 +46,28 @@ last(item,function(final){
 });
 
 
-
+// sumNums adds two numbers (x, y) and passes the result to the callback.
 function sumNums(x, y, cb) {
-  // sumNums adds two numbers (x, y) and passes the result to the callback.
+  return cb(x + y)
+  
 }
 
+// Invocation
+sumNums(1,1,function(total){
+  console.log(total)
+});
+
+
+
+ // multiplyNums multiplies two numbers and passes the result to the callback.
 function multiplyNums(x, y, cb) {
-  // multiplyNums multiplies two numbers and passes the result to the callback.
+ return cb(x * y)
 }
+// Invocation
+multiplyNums(x,y,function(multiple) {
+  console.log(multiple)
+});
+
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
