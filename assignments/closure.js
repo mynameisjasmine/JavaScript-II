@@ -1,18 +1,15 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
-function saysHello () {
   const greeting = 'Hello,'
-   
-   function saysGoodMorning () {
-     const newgreeting = " good morning" 
-     console.log(greeting + newgreeting)
-   }
-   return saysGoodMorning;
+
+ function saysHello () {
+   const newgreeting = "good morning"  
+   return `${greeting} ${newgreeting}`
  }
  
- const invocation = saysHello();
- console.log(invocation());
+  const invocation = saysHello();
+  console.log(invocation)
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
@@ -23,9 +20,17 @@ function saysHello () {
 // newCounter(); // 1
 // newCounter(); // 2
 
-const counter = () => {
-  
-};
+// const counter = () => {
+//   let count = 0
+//   return function() {
+//     count += 1;
+//     return count
+//   }
+// };
+// const newCount = counter();
+// console.log(newCount);
+// console.log(newCount);
+// console.log(newCount);
 
 
 

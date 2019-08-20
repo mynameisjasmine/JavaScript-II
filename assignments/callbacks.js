@@ -41,7 +41,7 @@ function last(arr, cb) {
 }
 
 // Invocation
-last(item,function(final){
+last(items,function(final){
   console.log(final)
 });
 
@@ -64,7 +64,7 @@ function multiplyNums(x, y, cb) {
  return cb(x * y)
 }
 // Invocation
-multiplyNums(x,y,function(multiple) {
+multiplyNums(3,4,function(multiple) {
   console.log(multiple)
 });
 

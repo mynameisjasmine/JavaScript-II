@@ -145,7 +145,7 @@ let bigDonation = [];
 console.log(bigDonation);
 
 
-// Problem 3
+// Problem 3 using .reduce
 // Get the total donations from a specific company
 
 const companyName = runners.filter((size) => {
