@@ -61,7 +61,7 @@ const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"c
 //first and last names into a new array called fullName. 
 let fullName = [];
  runners.forEach(function(runner) {
-      return fullName.push(runner.first_name, runner.last_name)
+      return fullName.push(`${runner.first_name} ${runner.last_name}`)
  });
 
 
@@ -129,8 +129,10 @@ allEmails = runners.map((contact => contact.email));
 console.log(allEmails);
 
 
+
+
 // Problem 2 - using .filter 
-//You want to create an array that lists the runners who gave donations of 200 or more, so you can send them a gift
+//You want to create an array that lists the runners who gave donations of 200 or more, so you can send them a gift.
 
 let bigDonation = [];
 
@@ -144,3 +146,17 @@ console.log(bigDonation);
 
 
 // Problem 3
+// Get the total donations from a specific company
+
+const companyName = runners.filter((size) => {
+  return size.company_name === "Skinix"
+ })
+ 
+ console.log(companyName);
+ 
+  const average = companyName.reduce((total,donations) => {
+   total += donations.donation
+  return total
+  },0)
+  
+  console.log(average)
