@@ -20,17 +20,18 @@
 // newCounter(); // 1
 // newCounter(); // 2
 
-// const counter = () => {
-//   let count = 0
-//   return function() {
-//     count += 1;
-//     return count
-//   }
-// };
-// const newCount = counter();
-// console.log(newCount);
-// console.log(newCount);
-// console.log(newCount);
+const counter = () => {
+  let count = 0
+  
+  return function() {
+    count += 1;
+    return count
+  }
+};
+const newCount = counter();
+console.log(newCount());
+console.log(newCount());
+console.log(newCount());
 
 
 
