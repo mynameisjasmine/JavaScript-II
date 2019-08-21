@@ -89,10 +89,10 @@ console.log(allCaps);
 
 let largeShirts = [];
 
- runners.filter(function(size) {
-   if(size.shirt_size === "L") {
-   largeShirts.push(size)
-} 
+largeShirts = runners.filter(function(size) {
+   return size.shirt_size === "L" 
+   
+ 
 });
 console.log(largeShirts);
 
@@ -137,10 +137,10 @@ console.log(allEmails);
 let bigDonation = [];
 
 
- runners.filter(function(donator) {
-   if(donator.donation >= 200) {
-   bigDonation.push(donator)
-} 
+bigDonation = runners.filter(function(donator) {
+   return donator.donation >= 200
+   
+
 });
 console.log(bigDonation);
 
@@ -155,8 +155,8 @@ const companyName = runners.filter((size) => {
  console.log(companyName);
  
   const average = companyName.reduce((total,donations) => {
-   total += donations.donation
-  return total
-  },0)
+    return total + donations.donation
   
-  console.log(average)
+  },0)
+   let officialValue = average/companyName.length
+  console.log(Math.round((officialValue)));
