@@ -61,7 +61,7 @@ const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"c
 //first and last names into a new array called fullName. 
 let fullName = [];
  runners.forEach(function(runner) {
-      return fullName.push(runner.first_name, runner.last_name)
+      return fullName.push(`${runner.first_name} ${runner.last_name}`)
  });
 
 
@@ -89,10 +89,10 @@ console.log(allCaps);
 
 let largeShirts = [];
 
- runners.filter(function(size) {
-   if(size.shirt_size === "L") {
-   largeShirts.push(size)
-} 
+largeShirts = runners.filter(function(size) {
+   return size.shirt_size === "L" 
+   
+ 
 });
 console.log(largeShirts);
 
@@ -129,18 +129,34 @@ allEmails = runners.map((contact => contact.email));
 console.log(allEmails);
 
 
+
+
 // Problem 2 - using .filter 
-//You want to create an array that lists the runners who gave donations of 200 or more, so you can send them a gift
+//You want to create an array that lists the runners who gave donations of 200 or more, so you can send them a gift.
 
 let bigDonation = [];
 
 
- runners.filter(function(donator) {
-   if(donator.donation >= 200) {
-   bigDonation.push(donator)
-} 
+bigDonation = runners.filter(function(donator) {
+   return donator.donation >= 200
+   
+
 });
 console.log(bigDonation);
 
 
-// Problem 3
+// Problem 3 using .reduce
+// Get the total donations from a specific company
+
+const companyName = runners.filter((size) => {
+  return size.company_name === "Skinix"
+ })
+ 
+ console.log(companyName);
+ 
+  const average = companyName.reduce((total,donations) => {
+    return total + donations.donation
+  
+  },0)
+   let officialValue = average/companyName.length
+  console.log(Math.round((officialValue)));

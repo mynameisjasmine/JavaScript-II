@@ -41,7 +41,7 @@ function last(arr, cb) {
 }
 
 // Invocation
-last(item,function(final){
+last(items,function(final){
   console.log(final)
 });
 
@@ -64,7 +64,7 @@ function multiplyNums(x, y, cb) {
  return cb(x * y)
 }
 // Invocation
-multiplyNums(x,y,function(multiple) {
+multiplyNums(3,4,function(multiple) {
   console.log(multiple)
 });
 
@@ -83,9 +83,16 @@ multiplyNums(x,y,function(multiple) {
   
 
 /* STRETCH PROBLEM */
-
-function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+
+dupArray = ['apple', 'cherry', 'grape', 'apple', 'orange', 'cherry', 'banana'];
+
+function removeDuplicates(array, cb) {
+  cb(Array.from(new Set(array)));
 }
+
+removeDuplicates(dupArray, function(singles){
+  console.log(singles);
+})
